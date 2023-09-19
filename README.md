@@ -4,6 +4,9 @@
 
 - Create React App
 - Configured tailwindcss
+- Header
+- Login Form
+- Sign up Form
 
 ........
 
@@ -11,7 +14,7 @@
 
 - Login/Sign Up
   - Sign In/Sign Up Form
-  - redirect to Browsw PAge
+  - redirect to Browsw Page
 - Browse( after authentication)
 
   - Header
