@@ -3,3 +3,15 @@ export const LOGO =
 
 export const USER_AVATAR =
   "https://lh3.googleusercontent.com/ogw/AKPQZvwf90da6u2N1IQcM5eCmTgz8hYdDLIOjFoalOk7=s64-c-mo";
+
+export const API_OPTIONS = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization:
+      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIwZWEwYmVlZDQ4MWRmZWI3NzlkMTg1MGM2OThkZjkxMiIsInN1YiI6IjY1MGFlMmRiMGQ1ZDg1MDBmZGI3YTM1NiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.82llBZr0a8Xe2zf3PHZEViCHopLw0v2lqo10RjQe320",
+  },
+};
+
+export const YOTUBE_URL =
+  "https://www.youtube.com/embed/2Nemq592QiM?si=MQ77s280_g5fqBdf";
