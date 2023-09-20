@@ -7,9 +7,9 @@ import {
   updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
-import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -19,16 +19,14 @@ const Login = () => {
   const email = useRef(null);
   const password = useRef(null);
 
-  const navigate = useNavigate();
-
   const toggleSignInForm = () => {
     setIsSignIn(!isSignIn);
   };
   const handleButtonClick = (event) => {
     event.preventDefault();
     // Validate the form data
-    console.log(email.current.value);
-    console.log(password.current.value);
+    // console.log(email.current.value);
+    // console.log(password.current.value);
     const message = checkValidData(email.current.value, password.current.value);
     setErrorMessage(message);
 
@@ -48,8 +46,7 @@ const Login = () => {
 
           updateProfile(user, {
             displayName: name.current.value,
-            photoURL:
-              "https://lh3.googleusercontent.com/ogw/AKPQZvwf90da6u2N1IQcM5eCmTgz8hYdDLIOjFoalOk7=s64-c-mo",
+            photoURL: USER_AVATAR,
           })
             .then(() => {
               // Profile updated!
@@ -64,7 +61,6 @@ const Login = () => {
                   photoURL: photoURL,
                 })
               );
-              navigate("/browse");
 
               // ...
             })
@@ -91,8 +87,6 @@ const Login = () => {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
           // ...
         })
         .catch((error) => {
@@ -135,11 +129,11 @@ const Login = () => {
           placeholder="Password"
           className="p-4 my-4 w-full rounded-sm bg-gray-500"
         />
-        <p className="text-red-500 py-4  px-2 font-bold text-lg">
+        <p className="text-red-500 py-4 px-2 font-bold text-lg">
           {errorMessage}
         </p>
         <button
-          className="p-4 my-8 bg-red-700 w-full rounded-sm"
+          className="p-4 my-4 bg-red-700 w-full rounded-sm"
           onClick={handleButtonClick}
         >
           {isSignIn ? "Sign In" : "Sign Up"}
