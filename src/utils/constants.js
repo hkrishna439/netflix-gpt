@@ -15,3 +15,5 @@ export const API_OPTIONS = {
 
 export const YOTUBE_URL =
   "https://www.youtube.com/embed/2Nemq592QiM?si=MQ77s280_g5fqBdf";
+
+export const IMG_CDN_URL = "https://image.tmdb.org/t/p/w500/";

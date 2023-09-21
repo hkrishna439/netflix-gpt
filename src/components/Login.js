@@ -100,8 +100,9 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
+          className="w-screen h-screen"
           src="https://assets.nflxext.com/ffe/siteui/vlv3/dc1cf82d-97c9-409f-b7c8-6ac1718946d6/14a8fe85-b6f4-4c06-8eaf-eccf3276d557/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt=""
+          alt="bg-logo"
         />
       </div>
       <form className="flex flex-col absolute p-12 bg-black w-4/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
