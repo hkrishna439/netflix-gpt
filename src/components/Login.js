@@ -25,8 +25,6 @@ const Login = () => {
   const handleButtonClick = (event) => {
     event.preventDefault();
     // Validate the form data
-    // console.log(email.current.value);
-    // console.log(password.current.value);
     const message = checkValidData(email.current.value, password.current.value);
     setErrorMessage(message);
 
@@ -85,7 +83,7 @@ const Login = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
+          // const user = userCredential.user;
           // ...
         })
         .catch((error) => {
@@ -101,7 +99,7 @@ const Login = () => {
       <div className="absolute">
         <img className="w-screen h-screen" src={IMG_BG_URL} alt="bg-logo" />
       </div>
-      <form className="flex flex-col absolute p-12 bg-black w-4/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
+      <form className="flex flex-col absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
         <h1 className="font-bold text-3xl mb-4">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>

@@ -46,7 +46,7 @@
 
 - Login/Sign Up
   - Sign In/Sign Up Form
-  - redirect to Browsw Page
+  - redirect to Browse Page
 - Browse( after authentication)
 
   - Header
@@ -57,5 +57,5 @@
       - Movies lists \* N
 
 - NetflixGPT
-- Search Bar
-- Movie suggestion
+  - Search Bar
+  - Movie suggestion
