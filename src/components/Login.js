@@ -97,10 +97,14 @@ const Login = () => {
     <div>
       <Header />
       <div className="absolute">
-        <img className="w-screen h-screen" src={IMG_BG_URL} alt="bg-logo" />
+        <img
+          className="w-screen h-screen object-cover"
+          src={IMG_BG_URL}
+          alt="bg-logo"
+        />
       </div>
-      <form className="flex flex-col absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
-        <h1 className="font-bold text-3xl mb-4">
+      <form className="flex flex-col absolute p-12 bg-black w-full md:w-3/12 my-36 mx-auto right-0 left-0 text-white bg-opacity-80 rounded-lg">
+        <h1 className="font-bold text-2xl md:text-3xl mb-4">
           {isSignIn ? "Sign In" : "Sign Up"}
         </h1>
         {!isSignIn && (
